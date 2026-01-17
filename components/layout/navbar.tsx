@@ -14,27 +14,30 @@ import {
   SheetTrigger,
   SheetTitle,
 } from "@/components/ui/sheet"
+import { LanguageSwitcher } from "./language-switcher"
+import { useLanguage } from "@/lib/i18n/LanguageContext"
 
 export function Navbar() {
   const pathname = usePathname()
   const [isOpen, setIsOpen] = React.useState(false)
+  const { t } = useLanguage()
 
   const routes = [
     {
       href: "/",
-      label: "Home",
+      label: t("home"),
     },
     {
       href: "/about",
-      label: "About Us",
+      label: t("about"),
     },
     {
       href: "/live",
-      label: "Live Impact",
+      label: t("live"),
     },
     {
       href: "/contact",
-      label: "Contact",
+      label: t("contact"),
     },
   ]
 
@@ -68,9 +71,10 @@ export function Navbar() {
             {/* Search or other items can go here */}
           </div>
           <div className="flex items-center gap-2">
+            <LanguageSwitcher />
             <Button asChild size="sm" className="hidden md:flex bg-accent text-accent-foreground hover:bg-accent/90">
               <Link href="/donate">
-                Donate Now
+                {t("donate")}
               </Link>
             </Button>
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -113,7 +117,7 @@ export function Navbar() {
                        className="bg-accent text-accent-foreground py-2 px-4 rounded-md text-center text-sm font-medium transition-colors hover:bg-accent/90 w-fit"
                        onClick={() => setIsOpen(false)}
                     >
-                      Donate Now
+                      {t("donate")}
                     </Link>
                   </div>
                 </div>
