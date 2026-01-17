@@ -23,9 +23,11 @@ export default function LoginPage() {
         <CardHeader>
           <CardTitle className="text-2xl text-center">Admin Login</CardTitle>
           <CardDescription className="text-center">
-            Enter your email below to login to your admin account.
+            Seva Samarth Foundation Admin Panel
             <br />
-            <span className="text-xs text-muted-foreground">(Use admin@samarth.org / any password for dev)</span>
+            <span className="text-xs text-green-600 font-medium mt-2 block">
+              Demo: admin@samarth.org / any password
+            </span>
           </CardDescription>
         </CardHeader>
         <CardContent>

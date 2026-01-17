@@ -19,14 +19,14 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
              where: { email: credentials.email as string }
         })
 
-        // Mock User for Dev if DB is empty
-        if (!user && (credentials.email === "admin@samarth.org")) {
+        // Mock User for Dev if DB is empty - Simple Login
+        if (!user && credentials.email === "admin@samarth.org") {
              return { id: "1", name: "Admin", email: "admin@samarth.org", role: "admin" }
         }
-
+        
+        // For demo: Accept any password for existing users
         if (!user) {
            return null
-           // throw new Error("User not found.")
         }
 
         // const isPasswordValid = await compare(credentials.password as string, user.password)
