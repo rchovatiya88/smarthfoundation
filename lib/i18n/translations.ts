@@ -33,8 +33,8 @@ export const translations = {
     allRights: "All rights reserved.",
     
     // About Page
-    aboutTitle: "About Sarva Samarth Foundation",
-    aboutP1: "The Sarva Samarth Foundation is a beacon of hope in Ahmedabad, Gujarat, dedicated to serving the most vulnerable members of our society - including children, elderly, women, and anyone in dire need of assistance.",
+    aboutTitle: "About Seva Samarth Foundation",
+    aboutP1: "The Seva Samarth Foundation is a beacon of hope in Ahmedabad, Gujarat, dedicated to serving the most vulnerable members of our society - including children, elderly, women, and anyone in dire need of assistance.",
     aboutP2: "Our organization works tirelessly to ensure that no human being is deprived of basic necessities like food, shelter, medical care, and dignity. We believe that every person, regardless of their circumstances, deserves compassion and support.",
     aboutP3: "Our mission goes beyond just providing immediate relief; we strive to rehabilitate individuals, reconnect them with their families when possible, provide medical care to those who have been neglected, and offer a pathway to a better future.",
     ourVision: "Our Vision",
@@ -128,8 +128,8 @@ export const translations = {
     allRights: "બધા અધિકારો અનામત.",
     
     // About Page
-    aboutTitle: "સર્વ સમર્થ ફાઉન્ડેશન વિશે",
-    aboutP1: "સર્વ સમર્થ ફાઉન્ડેશન અમદાવાદ, ગુજરાતમાં આશાનું કિરણ છે, જે આપણા સમાજના સૌથી નબળા સભ્યોને સેવા આપવા માટે સમર્પિત છે - જેમાં બાળકો, વૃદ્ધો, સ્ત્રીઓ અને સહાયની જરૂર ધરાવતા કોઈપણનો સમાવેશ થાય છે.",
+    aboutTitle: "સેવા સમર્થ ફાઉન્ડેશન વિશે",
+    aboutP1: "સેવા સમર્થ ફાઉન્ડેશન અમદાવાદ, ગુજરાતમાં આશાનું કિરણ છે, જે આપણા સમાજના સૌથી નબળા સભ્યોને સેવા આપવા માટે સમર્પિત છે - જેમાં બાળકો, વૃદ્ધો, સ્ત્રીઓ અને સહાયની જરૂર ધરાવતા કોઈપણનો સમાવેશ થાય છે.",
     aboutP2: "અમારી સંસ્થા ખાતરી કરવા માટે અથાક મહેનત કરે છે કે કોઈપણ માનવીને ખોરાક, આશ્રય, તબીબી સંભાળ અને ગૌરવ જેવી મૂળભૂત જરૂરિયાતોથી વંચિત ન રાખવામાં આવે. અમે માનીએ છીએ કે દરેક વ્યક્તિ, તેમના સંજોગોને ધ્યાનમાં લીધા વિના, કરુણા અને સમર્થનને પાત્ર છે.",
     aboutP3: "અમારું મિશન માત્ર તાત્કાલિક રાહત આપવા કરતાં આગળ જાય છે; અમે વ્યક્તિઓનું પુનર્વસન કરવા, શક્ય હોય ત્યારે તેમને તેમના પરિવારો સાથે ફરીથી જોડવા, ઉપેક્ષિત લોકોને તબીબી સંભાળ પ્રદાન કરવા અને વધુ સારા ભવિષ્યનો માર્ગ પ્રદાન કરવાનો પ્રયાસ કરીએ છીએ.",
     ourVision: "અમારી દ્રષ્ટિ",
@@ -223,8 +223,8 @@ export const translations = {
     allRights: "सभी अधिकार सुरक्षित।",
     
     // About Page
-    aboutTitle: "सर्व समर्थ फाउंडेशन के बारे में",
-    aboutP1: "सर्व समर्थ फाउंडेशन अहमदाबाद, गुजरात में आशा की किरण है, जो हमारे समाज के सबसे कमजोर सदस्यों की सेवा करने के लिए समर्पित है - जिसमें बच्चे, बुजुर्ग, महिलाएं और सहायता की जरूरत वाले कोई भी शामिल हैं।",
+    aboutTitle: "सेवा समर्थ फाउंडेशन के बारे में",
+    aboutP1: "सेवा समर्थ फाउंडेशन अहमदाबाद, गुजरात में आशा की किरण है, जो हमारे समाज के सबसे कमजोर सदस्यों की सेवा करने के लिए समर्पित है - जिसमें बच्चे, बुजुर्ग, महिलाएं और सहायता की जरूरत वाले कोई भी शामिल हैं।",
     aboutP2: "हमारी संस्था यह सुनिश्चित करने के लिए अथक प्रयास करती है कि किसी भी मनुष्य को भोजन, आश्रय, चिकित्सा देखभाल और गरिमा जैसी बुनियादी जरूरतों से वंचित न किया जाए। हम मानते हैं कि हर व्यक्ति, उनकी परिस्थितियों की परवाह किए बिना, करुणा और समर्थन का हकदार है।",
     aboutP3: "हमारा मिशन सिर्फ तत्काल राहत प्रदान करने से आगे जाता है; हम व्यक्तियों का पुनर्वास करने, संभव होने पर उन्हें अपने परिवारों से फिर से जोड़ने, उपेक्षित लोगों को चिकित्सा देखभाल प्रदान करने और बेहतर भविष्य का मार्ग प्रदान करने का प्रयास करते हैं।",
     ourVision: "हमारी दृष्टि",

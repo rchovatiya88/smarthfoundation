@@ -1,7 +1,7 @@
-# Sarva Samarth Foundation - NGO Website
+# Sarva Seva Samarth Foundation - NGO Website
 
 ## Overview
-A comprehensive NGO website for Sarva Samarth Foundation to help people in dire need - children, elderly, women, and vulnerable individuals in Ahmedabad, Gujarat.
+A comprehensive NGO website for Sarva Seva Samarth Foundation to help people in dire need - children, elderly, women, and vulnerable individuals in Ahmedabad, Gujarat.
 
 ## Features Implemented
 
@@ -159,4 +159,4 @@ For any questions or issues, please contact the development team or refer to the
 
 ---
 
-**Built with ❤️ for Sarva Samarth Foundation**
+**Built with ❤️ for Sarva Seva Samarth Foundation**
