@@ -1,8 +1,13 @@
+"use client"
+
 import Link from "next/link"
 import Image from "next/image"
 import { Facebook, Instagram, Youtube } from "lucide-react"
+import { useLanguage } from "@/lib/i18n/LanguageContext"
 
 export function Footer() {
+  const { t } = useLanguage()
+  
   return (
     <footer className="border-t bg-slate-50 dark:bg-slate-950">
       <div className="container mx-auto px-4 py-8">
@@ -14,25 +19,25 @@ export function Footer() {
               <span className="font-bold text-primary">Sarva Samarth Foundation</span>
             </Link>
             <p className="text-sm text-muted-foreground max-w-xs">
-              Dedicated to helping people in dire need - children, elderly, women, and those who need our support in Ahmedabad, Gujarat.
+              {t("footerDesc")}
             </p>
           </div>
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h3 className="font-semibold text-sm">Quick Links</h3>
+            <h3 className="font-semibold text-sm">{t("quickLinks")}</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><Link href="/" className="hover:text-primary transition-colors">Home</Link></li>
-              <li><Link href="/about" className="hover:text-primary transition-colors">About Us</Link></li>
-              <li><Link href="/live" className="hover:text-primary transition-colors">Live Impact</Link></li>
-              <li><Link href="/donate" className="hover:text-primary transition-colors">Donate</Link></li>
-              <li><Link href="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
+              <li><Link href="/" className="hover:text-primary transition-colors">{t("home")}</Link></li>
+              <li><Link href="/about" className="hover:text-primary transition-colors">{t("about")}</Link></li>
+              <li><Link href="/live" className="hover:text-primary transition-colors">{t("live")}</Link></li>
+              <li><Link href="/donate" className="hover:text-primary transition-colors">{t("donate")}</Link></li>
+              <li><Link href="/contact" className="hover:text-primary transition-colors">{t("contact")}</Link></li>
             </ul>
           </div>
 
           {/* Social Media & Admin */}
           <div className="space-y-4">
-            <h3 className="font-semibold text-sm">Connect With Us</h3>
+            <h3 className="font-semibold text-sm">{t("connectWith")}</h3>
             <div className="flex gap-4">
               <a 
                 href="https://www.facebook.com/ssfoundation21/" 
@@ -64,7 +69,7 @@ export function Footer() {
             </div>
             <div className="pt-4">
               <Link href="/admin" className="text-sm font-medium text-muted-foreground hover:text-primary underline underline-offset-4">
-                Admin Login
+                {t("adminLogin")}
               </Link>
             </div>
           </div>
@@ -73,7 +78,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="border-t mt-8 pt-6 text-center">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Sarva Samarth Foundation. All rights reserved.
+            © {new Date().getFullYear()} Sarva Samarth Foundation. {t("allRights")}
           </p>
         </div>
       </div>
