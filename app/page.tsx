@@ -14,10 +14,10 @@ export default function HomePage() {
           <div className="flex flex-col items-center gap-4 text-center">
             <div className="space-y-2">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl text-primary">
-                Lending a Helping Hand to the Homeless
+                Helping Those in Dire Need
               </h1>
               <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
-                Join Siddhrajsinh Zala and the Samarth Foundation in our mission to provide food, shelter, and dignity to those in need across Ahmedabad.
+                Supporting children, elderly, women, and all vulnerable individuals with food, shelter, medical care, and dignity across Ahmedabad, Gujarat.
               </p>
             </div>
             <div className="space-x-4">
@@ -78,7 +78,7 @@ export default function HomePage() {
              <div className="space-y-2 mb-8">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-primary">Making a Real Impact</h2>
               <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                Transparency in every step. See how your support transforms lives in real-time.
+                Transparency in every step. See how your support transforms lives - from children to elderly, everyone deserves care.
               </p>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 w-full max-w-4xl">
