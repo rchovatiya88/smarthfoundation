@@ -15,8 +15,8 @@ export function Footer() {
           {/* Logo and Description */}
           <div className="space-y-4">
             <Link href="/" className="flex items-center space-x-3">
-              <Image src="/logo.png" alt="Sarva Samarth Foundation" width={48} height={48} className="h-12 w-12 object-contain" />
-              <span className="font-bold text-primary">Sarva Samarth Foundation</span>
+              <Image src="/logo.png" alt="Seva Samarth Foundation" width={48} height={48} className="h-12 w-12 object-contain" />
+              <span className="font-bold text-primary">Seva Samarth Foundation</span>
             </Link>
             <p className="text-sm text-muted-foreground max-w-xs">
               {t("footerDesc")}
@@ -78,7 +78,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="border-t mt-8 pt-6 text-center">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Sarva Samarth Foundation. {t("allRights")}
+            © {new Date().getFullYear()} Seva Samarth Foundation. {t("allRights")}
           </p>
         </div>
       </div>

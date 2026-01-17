@@ -7,9 +7,9 @@ export default function AboutPage() {
     <div className="container py-12 px-4 md:px-6 mx-auto">
       <div className="grid gap-12 lg:grid-cols-2 items-center">
         <div className="space-y-6">
-           <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl text-primary">About Sarva Samarth Foundation</h1>
+           <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl text-primary">About Seva Samarth Foundation</h1>
            <p className="text-lg text-gray-500 text-justify">
-             The Sarva Samarth Foundation is a beacon of hope in Ahmedabad, Gujarat, dedicated to serving the most vulnerable members of our society - including children, elderly, women, and anyone in dire need of assistance.
+             The Seva Samarth Foundation is a beacon of hope in Ahmedabad, Gujarat, dedicated to serving the most vulnerable members of our society - including children, elderly, women, and anyone in dire need of assistance.
            </p>
            <p className="text-lg text-gray-500 text-justify">
              Our organization works tirelessly to ensure that no human being is deprived of basic necessities like food, shelter, medical care, and dignity. We believe that every person, regardless of their circumstances, deserves compassion and support.

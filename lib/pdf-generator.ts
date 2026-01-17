@@ -30,7 +30,7 @@ export const generateRescuePDF = (rescue: RescueReportData) => {
     doc.rect(0, 0, 210, 40, 'F')
     doc.setTextColor(255, 255, 255)
     doc.setFontSize(22)
-    doc.text("Samarth Foundation", 105, 20, { align: "center" })
+    doc.text("Seva Samarth Foundation", 105, 20, { align: "center" })
     doc.setFontSize(12)
     doc.text("Rescue & Assistance Report", 105, 30, { align: "center" })
     
@@ -72,7 +72,7 @@ export const generateRescuePDF = (rescue: RescueReportData) => {
     const pageHeight = doc.internal.pageSize.height
     doc.setFontSize(10)
     doc.setTextColor(150)
-    doc.text("Sarva Samarth Foundation - Helping people in dire need - Ahmedabad, Gujarat", 105, pageHeight - 10, { align: "center" })
+    doc.text("Seva Samarth Foundation - Helping people in dire need - Ahmedabad, Gujarat", 105, pageHeight - 10, { align: "center" })
 
     doc.save(`Rescue_Report_${rescue.id.substring(0, 8)}.pdf`)
 }

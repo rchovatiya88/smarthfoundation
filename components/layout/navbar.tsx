@@ -46,9 +46,9 @@ export function Navbar() {
       <div className="container flex h-16 items-center mx-auto px-4">
         <div className="mr-8 hidden md:flex">
           <Link href="/" className="mr-6 flex items-center space-x-3">
-            <Image src="/logo.png" alt="Sarva Samarth Foundation" width={50} height={50} className="h-12 w-12 object-contain" />
+            <Image src="/logo.png" alt="Seva Samarth Foundation" width={50} height={50} className="h-12 w-12 object-contain" />
             <span className="hidden font-bold sm:inline-block text-primary text-lg">
-              Sarva Samarth Foundation
+              Seva Samarth Foundation
             </span>
           </Link>
           <nav className="flex items-center space-x-6 text-sm font-medium">
@@ -94,8 +94,8 @@ export function Navbar() {
                   className="flex items-center space-x-2"
                   onClick={() => setIsOpen(false)}
                 >
-                  <Image src="/logo.png" alt="Sarva Samarth Foundation" width={40} height={40} className="h-10 w-10 object-contain" />
-                  <span className="font-bold text-primary text-sm">Sarva Samarth Foundation</span>
+                  <Image src="/logo.png" alt="Seva Samarth Foundation" width={40} height={40} className="h-10 w-10 object-contain" />
+                  <span className="font-bold text-primary text-sm">Seva Samarth Foundation</span>
                 </Link>
                 <div className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
                   <div className="flex flex-col space-y-3">

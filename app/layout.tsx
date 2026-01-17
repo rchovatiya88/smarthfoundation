@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sarva Samarth Foundation",
+  title: "Seva Samarth Foundation",
   description: "Helping people in dire need - children, elderly, women, and vulnerable individuals with food, shelter, and medical care in Ahmedabad, Gujarat.",
 };
 
