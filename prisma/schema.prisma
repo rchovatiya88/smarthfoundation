@@ -1,0 +1,64 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
+  name      String?
+  role      String   @default("admin") // admin, viewer
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Rescue {
+  id          String   @id @default(cuid())
+  date        DateTime @default(now())
+  location    String
+  latitude    Float?
+  longitude   Float?
+  
+  // Personal Info (Optional/Anonymous)
+  name        String?
+  age         Int?
+  gender      String? // Male, Female, Other
+  
+  // Details
+  description String?
+  condition   String?
+  needs       String? // Comma separated values: Food, Shelter, Medical
+  
+  // Assistance Provided
+  foodGiven   Boolean  @default(false)
+  shelterGiven Boolean @default(false)
+  medicalGiven Boolean @default(false)
+  
+  status      String   @default("In Progress") // In Progress, Completed
+  photos      String?  // JSON string of photo URLs
+  
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Donation {
+  id            String   @id @default(cuid())
+  amount        Float
+  currency      String   @default("INR")
+  donorName     String?
+  donorEmail    String?
+  donorPhone    String?
+  purpose       String?
+  paymentId     String?  // Razorpay Payment ID
+  status        String   @default("pending") // pending, success, failed
+  
+  createdAt     DateTime @default(now())
+}
