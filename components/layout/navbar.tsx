@@ -2,8 +2,9 @@
 
 import * as React from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { usePathname } from "next/navigation"
-import { Menu, Heart } from "lucide-react"
+import { Menu } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
@@ -41,10 +42,10 @@ export function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center mx-auto px-4">
         <div className="mr-8 hidden md:flex">
-          <Link href="/" className="mr-6 flex items-center space-x-2">
-            <Heart className="h-6 w-6 text-primary" fill="currentColor" />
-            <span className="hidden font-bold sm:inline-block text-primary text-xl">
-              Samarth Foundation
+          <Link href="/" className="mr-6 flex items-center space-x-3">
+            <Image src="/logo.png" alt="Sarva Samarth Foundation" width={50} height={50} className="h-12 w-12 object-contain" />
+            <span className="hidden font-bold sm:inline-block text-primary text-lg">
+              Sarva Samarth Foundation
             </span>
           </Link>
           <nav className="flex items-center space-x-6 text-sm font-medium">
@@ -86,11 +87,11 @@ export function Navbar() {
                 <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
                 <Link
                   href="/"
-                  className="flex items-center"
+                  className="flex items-center space-x-2"
                   onClick={() => setIsOpen(false)}
                 >
-                  <Heart className="mr-2 h-4 w-4 text-primary" fill="currentColor" />
-                  <span className="font-bold text-primary">Samarth Foundation</span>
+                  <Image src="/logo.png" alt="Sarva Samarth Foundation" width={40} height={40} className="h-10 w-10 object-contain" />
+                  <span className="font-bold text-primary text-sm">Sarva Samarth Foundation</span>
                 </Link>
                 <div className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
                   <div className="flex flex-col space-y-3">
