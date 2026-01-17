@@ -31,7 +31,7 @@ export default function DonatePage() {
     <div className="container py-12 px-4 md:px-6 mx-auto max-w-lg">
       <div className="text-center mb-8">
         <h1 className="text-3xl font-bold text-primary mb-2">Support Our Cause</h1>
-        <p className="text-muted-foreground">Your contribution helps provide food, shelter, and medical care.</p>
+        <p className="text-muted-foreground">Your contribution helps provide food, shelter, medical care, and dignity to those in need - children, elderly, women, and vulnerable individuals.</p>
       </div>
 
       <Card>
@@ -112,10 +112,13 @@ export default function DonatePage() {
                     <SelectValue placeholder="Select purpose" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="general">Data General Fund</SelectItem>
+                    <SelectItem value="general">General Fund</SelectItem>
                     <SelectItem value="food">Food Distribution</SelectItem>
                     <SelectItem value="medical">Medical Assistance</SelectItem>
-                    <SelectItem value="shelter">Shelter Construction</SelectItem>
+                    <SelectItem value="shelter">Shelter Support</SelectItem>
+                    <SelectItem value="children">Children Support</SelectItem>
+                    <SelectItem value="elderly">Elderly Care</SelectItem>
+                    <SelectItem value="women">Women Support</SelectItem>
                   </SelectContent>
                 </Select>
             </div>
