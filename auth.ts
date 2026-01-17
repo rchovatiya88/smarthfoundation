@@ -15,25 +15,21 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
           return null
         }
         
+        // Simple login: admin@samarth.org with any password
+        if (credentials.email === "admin@samarth.org") {
+             return { id: "1", name: "Admin", email: "admin@samarth.org", role: "admin" }
+        }
+        
+        // Check database for other users
         let user = await prisma.user.findUnique({
              where: { email: credentials.email as string }
         })
 
-        // Mock User for Dev if DB is empty - Simple Login
-        if (!user && credentials.email === "admin@samarth.org") {
-             return { id: "1", name: "Admin", email: "admin@samarth.org", role: "admin" }
-        }
-        
-        // For demo: Accept any password for existing users
         if (!user) {
            return null
         }
-
-        // const isPasswordValid = await compare(credentials.password as string, user.password)
-        // if (!isPasswordValid) return null
         
-        // For POC, simple password check if user exists in DB or just use mock above
-        
+        // For demo: Accept any password for existing users
         return {
             id: user.id,
             email: user.email,
@@ -44,18 +40,10 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     }),
   ],
   callbacks: {
-    // Add role to session
-    // session: ({ session, token }) => ({
-    //    ...session,
-    //    user: {
-    //      ...session.user,
-    //      role: token.role,
-    //    },
-    // }),
-    // jwt: ({ token, user }) => {
-    //     if (user) token.role = user.role
-    //     return token
-    // }
+    authorized: async ({ auth }) => {
+      // Allow all requests
+      return true
+    }
   },
   pages: {
     signIn: "/admin/login",
