@@ -9,10 +9,17 @@ interface RescueReportData {
     name: string | null
     age: number | null
     gender: string | null
+    contactNumber: string | null
     condition: string | null
     needs: string | null
     description: string | null
+    medicalHistory: string | null
+    followUpNotes: string | null
+    rescuedBy: string | null
     status: string
+    foodGiven: boolean
+    shelterGiven: boolean
+    medicalGiven: boolean
 }
 
 export const generateRescuePDF = (rescue: RescueReportData) => {
@@ -36,11 +43,16 @@ export const generateRescuePDF = (rescue: RescueReportData) => {
     // Table Data
     const tableData = [
         ["Location", rescue.location],
+        ["Rescued By", rescue.rescuedBy || "N/A"],
         ["Name", rescue.name || "Unknown"],
         ["Age / Gender", `${rescue.age || 'N/A'} / ${rescue.gender || 'N/A'}`],
+        ["Contact Number", rescue.contactNumber || "N/A"],
         ["Condition", rescue.condition || "N/A"],
         ["Immediate Needs", rescue.needs || "N/A"],
         ["Description", rescue.description || "N/A"],
+        ["Medical History", rescue.medicalHistory || "N/A"],
+        ["Assistance Provided", `${rescue.foodGiven ? 'Food, ' : ''}${rescue.shelterGiven ? 'Shelter, ' : ''}${rescue.medicalGiven ? 'Medical' : ''}`],
+        ["Follow-up Notes", rescue.followUpNotes || "N/A"],
         ["Status", rescue.status]
     ]
 
@@ -60,7 +72,7 @@ export const generateRescuePDF = (rescue: RescueReportData) => {
     const pageHeight = doc.internal.pageSize.height
     doc.setFontSize(10)
     doc.setTextColor(150)
-    doc.text("Helping the homeless with food and shelter - Ahmedabad", 105, pageHeight - 10, { align: "center" })
+    doc.text("Sarva Samarth Foundation - Helping people in dire need - Ahmedabad, Gujarat", 105, pageHeight - 10, { align: "center" })
 
     doc.save(`Rescue_Report_${rescue.id.substring(0, 8)}.pdf`)
 }
