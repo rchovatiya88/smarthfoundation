@@ -31,11 +31,14 @@ model Rescue {
   name        String?
   age         Int?
   gender      String? // Male, Female, Other
+  contactNumber String?
   
   // Details
   description String?
   condition   String?
   needs       String? // Comma separated values: Food, Shelter, Medical
+  medicalHistory String?
+  followUpNotes String?
   
   // Assistance Provided
   foodGiven   Boolean  @default(false)
@@ -44,6 +47,7 @@ model Rescue {
   
   status      String   @default("In Progress") // In Progress, Completed
   photos      String?  // JSON string of photo URLs
+  rescuedBy   String?  // Name of rescuer/volunteer
   
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
