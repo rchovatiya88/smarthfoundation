@@ -1,7 +1,6 @@
 "use client"
-import { useActionState, useEffect } from "react"
-import { useFormStatus } from "react-dom"
-import { authenticate } from "@/lib/actions"
+import { useState } from "react"
+import { signIn } from "next-auth/react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -9,13 +8,31 @@ import { Label } from "@/components/ui/label"
 import { toast } from "sonner"
 
 export default function LoginPage() {
-  const [errorMessage, dispatch] = useActionState(authenticate, undefined)
+  const [loading, setLoading] = useState(false)
 
-  useEffect(() => {
-    if (errorMessage) {
-        toast.error(errorMessage)
+  async function handleSubmit(e: any) {
+    e.preventDefault()
+    setLoading(true)
+    const form = new FormData(e.currentTarget as HTMLFormElement)
+    const email = String(form.get("email") ?? "")
+    const password = String(form.get("password") ?? "")
+
+    const res = await signIn("credentials", {
+      redirect: false,
+      email,
+      password,
+    } as any)
+
+    setLoading(false)
+
+    if (res?.error) {
+      toast.error("Invalid credentials.")
+      return
     }
-  }, [errorMessage])
+
+    // On success, redirect to admin dashboard
+    window.location.href = "/admin/dashboard"
+  }
 
   return (
     <div className="flex h-screen w-full items-center justify-center px-4">
@@ -31,34 +48,21 @@ export default function LoginPage() {
           </CardDescription>
         </CardHeader>
         <CardContent>
-           <form action={dispatch} className="grid gap-4">
+          <form onSubmit={handleSubmit} className="grid gap-4">
             <div className="grid gap-2">
               <Label htmlFor="email">Email</Label>
-              <Input
-                id="email"
-                type="email"
-                name="email"
-                placeholder="m@example.com"
-                required
-              />
+              <Input id="email" type="email" name="email" placeholder="m@example.com" required />
             </div>
             <div className="grid gap-2">
               <Label htmlFor="password">Password</Label>
               <Input id="password" type="password" name="password" required />
             </div>
-            <LoginButton />
+            <Button className="w-full" type="submit" aria-disabled={loading}>
+              {loading ? "Logging in..." : "Login"}
+            </Button>
           </form>
         </CardContent>
       </Card>
     </div>
-  )
-}
-
-function LoginButton() {
-  const { pending } = useFormStatus()
-  return (
-    <Button className="w-full" aria-disabled={pending}>
-      {pending ? "Logging in..." : "Login"}
-    </Button>
   )
 }
