@@ -11,7 +11,7 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { DownloadIcon } from "lucide-react"
 // import { generateRescuePDF } from "@/lib/pdf-generator" // Note: Client-side only. We will need a client component for the button.
-import { PDFDownloadButton } from "./pdf-button"
+import { RescueActions } from "./rescue-actions"
 
 export default async function RescueListPage() {
   const rescues = await prisma.rescue.findMany({
@@ -52,7 +52,7 @@ export default async function RescueListPage() {
                     </Badge>
                 </TableCell>
                 <TableCell className="text-right">
-                    <PDFDownloadButton rescue={rescue} />
+                    <RescueActions rescue={rescue} />
                 </TableCell>
               </TableRow>
             ))}
