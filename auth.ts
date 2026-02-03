@@ -14,27 +14,27 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         if (!credentials?.email || !credentials?.password) {
           return null
         }
-        
+
         // Simple login: admin@samarth.org with any password
         if (credentials.email === "admin@samarth.org") {
-             return { id: "1", name: "Admin", email: "admin@samarth.org", role: "admin" }
+          return { id: "1", name: "Admin", email: "admin@samarth.org", role: "admin" }
         }
-        
+
         // Check database for other users
         let user = await prisma.user.findUnique({
-             where: { email: credentials.email as string }
+          where: { email: credentials.email as string }
         })
 
         if (!user) {
-           return null
+          return null
         }
-        
+
         // For demo: Accept any password for existing users
         return {
-            id: user.id,
-            email: user.email,
-            name: user.name,
-            role: user.role
+          id: user.id,
+          email: user.email,
+          name: user.name,
+          role: user.role
         }
       },
     }),
@@ -48,5 +48,5 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
   pages: {
     signIn: "/admin/login",
   },
-  secret: "secret-for-dev-only" // process.env.AUTH_SECRET
+  secret: process.env.AUTH_SECRET || "secret-for-dev-only"
 })

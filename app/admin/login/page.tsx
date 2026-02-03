@@ -17,11 +17,11 @@ export default function LoginPage() {
     const email = String(form.get("email") ?? "")
     const password = String(form.get("password") ?? "")
 
-    const res = await signIn("credentials", {
+    const res: any = await signIn("credentials", {
       redirect: false,
       email,
       password,
-    } as any)
+    })
 
     setLoading(false)
 

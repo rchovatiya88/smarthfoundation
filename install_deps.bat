@@ -1,0 +1,1 @@
+call npm install > install_log.txt 2>&1
